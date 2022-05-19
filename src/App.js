@@ -1,4 +1,4 @@
-import TodoList from "./components/TodoList";
+import TodoList from "./components/ToDoList/TodoList";
 import "./App.css";
 
 function App() {

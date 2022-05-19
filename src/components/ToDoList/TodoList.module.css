@@ -1,0 +1,36 @@
+.list {
+  padding: 0;
+}
+
+.item {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.selector {
+  width: 20px;
+  height: 20px;
+  display: block;
+  border: 5px solid darkred;
+  border-radius: 4px;
+  margin-right: 12px;
+}
+
+.selectorCompleted {
+  position: relative;
+}
+
+.selectorCompleted::after {
+  position: absolute;
+  content: "X";
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}

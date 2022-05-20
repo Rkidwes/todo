@@ -45,7 +45,7 @@ function TodoList() {
   };
 
   return (
-    <>
+    <div className="max-w-sm bg-gray-400">
       <ul className={styles.list}>
         {todoList.map((todo, i) => (
           <li
@@ -66,17 +66,19 @@ function TodoList() {
           </li>
         ))}
       </ul>
-      <form>
-        <input
-          type="text"
-          name="name"
-          value={userInput}
-          onChange={(e) => setUserInput(e.target.value)}
-        />
-        <button onClick={(e) => handleSubmit(e)}>Add Todo</button>
-      </form>
+      <div className="flex spacing">
+        <form>
+          <input
+            type="text"
+            name="name"
+            value={userInput}
+            onChange={(e) => setUserInput(e.target.value)}
+          />
+          <button className="border radius-full" onClick={(e) => handleSubmit(e)}>Add Todo</button>
+        </form>
+      </div>
       <button onClick={(e) => clearCompleted(e)}>Clear completed tasks</button>
-    </>
+    </div>
   );
 }
 
